@@ -1,24 +1,25 @@
 
 {
-    "name": "daylerees/sanitizer",
+    "name": "markuper/sanitizer",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dayle Rees",
-            "email": "me@daylerees.com"
+            "name": "Markuper",
+            "email": "et@markuper.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
         "illuminate/container": ">=4.0.0",
-        "illuminate/support": ">=4.0.0"
+        "illuminate/support": ">=4.0.0",
+        "illuminate/helper": ">1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
         "psr-4": {
-            "Rees\\Sanitizer\\": "src"
+            "Markuper\\Sanitizer\\": "src"
         }
     },
     "minimum-stability": "dev"

@@ -1,6 +1,6 @@
 <?php
 
-use Rees\Sanitizer\Sanitizer;
+use Markuper\Sanitizer\Sanitizer;
 
 class SanitizerTest extends PHPUnit_Framework_TestCase
 {

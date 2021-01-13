@@ -1,6 +1,6 @@
 <?php
 
-namespace Rees\Sanitizer;
+namespace Markuper\Sanitizer;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 

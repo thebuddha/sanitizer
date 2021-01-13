@@ -1,6 +1,6 @@
 notifications:
   email:
-    - me@daylerees.com
+    - et@markuper.com
 
 language: php
 cache: composer

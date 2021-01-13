@@ -1,6 +1,6 @@
 <?php
 
-namespace Rees\Sanitizer;
+namespace Markuper\Sanitizer;
 
 use Closure;
 use Illuminate\Container\Container;
