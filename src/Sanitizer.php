@@ -134,7 +134,7 @@ class Sanitizer
         }
 
         // Get value from data array.
-        $value = Arr::get($data, $field);
+        $value = Arr::pull($data, $field);
 
         // Iterate the rule set.
         foreach ($ruleset as $rule) {
