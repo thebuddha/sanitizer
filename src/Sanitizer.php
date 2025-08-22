@@ -142,7 +142,7 @@ class Sanitizer
             // If exists, getting parameters
             $parametersSet = array();
             if (str_contains($rule, ':')) {
-                list($rule, $parameters) = explode(':', $rule);
+                list($rule, $parameters) = explode(':', $rule, 2);
                 $parametersSet = explode(',', $parameters);
             }
             array_unshift($parametersSet, $value);

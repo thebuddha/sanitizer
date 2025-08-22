@@ -1,10 +1,10 @@
-
 {
     "name": "markuper/sanitizer",
+    "version": "1.0.4",
     "license": "MIT",
     "authors": [
         {
-            "name": "Markuper",
+            "name": "Evgeniy Tyurin (Markuper)",
             "email": "et@markuper.com"
         }
     ],
