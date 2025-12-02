@@ -47,7 +47,7 @@ class Sanitizer
      * @param  mixed  $callback
      * @return void
      */
-    public function register($name, $callback)
+    public function register(string $name, string | callable $callback)
     {
         // Add the sanitizer to the set.
         $this->sanitizers[$name] = $callback;
@@ -73,6 +73,7 @@ class Sanitizer
             // Execute sanitizers over a specific field.
             $this->sanitizeField($data, $field, $ruleset);
         }
+
         return $data;
     }
 
@@ -166,9 +167,24 @@ class Sanitizer
      * @param  string $key
      * @return Callable
      */
-    protected function getSanitizer($key)
+    protected function getSanitizer($key, $default = null): callable | null
     {
-        return Arr::get($this->sanitizers, $key, $key);
+        $value = Arr::get($this->sanitizers, $key, null);
+
+        if($value instanceof Closure || is_callable($value)) {
+            return $value;
+        }
+
+        // we suppose it's a class
+        if(is_string($value) && class_exists($value)) {
+            $value = new $value();
+            Arr::set($this->sanitizers, $key, $value);
+
+            return $value;
+        }
+
+
+        return $default;
     }
 
     /**
